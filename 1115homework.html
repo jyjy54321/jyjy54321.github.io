@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .product-group{
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .product:hover{
+            background-color: 	#FFFFCE;
+        }
+        .product{
+            width: 180px;
+            margin: 10px 0;
+            padding: 10px ;
+            border-bottom: 1px dotted #888888;
+            display: block;
+            text-align: center;
+            
+        }
+        .product img{
+            width: 80%;
+            margin: 0 10px;
+            
+        }
+        .picture-point{
+            display: inline-block;
+            width: 112px;
+            height: 6px;
+            
+        }
+        
+        .point{
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #888888;
+            opacity: 0.2;
+            border-radius: 100%;
+        }
+        .point:first-child{
+            width: 5px;
+            height: 6px;
+            opacity: 1;
+            background-color: #d62872;
+        }
+        h3{
+            font-size: 13px;
+            font-family:"SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            color: #666666;
+            text-align: left;
+            margin: 3px 10px 15px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 顯示行數 */
+            -webkit-box-orient: vertical; /* 控制方向(垂直) */
+        }
+        h3 p{
+            color: #DD2726;
+            justify-content:end;
+            margin: 1px 10px ;
+        }
+        .price{
+            font-size: 24px;
+            font-family: 'Oxygen', sans-serif;;
+            color: #d62872;
+            text-align: left;
+            margin-bottom:2px;
+        }
+        .price span{
+            font-size: 13px;
+            letter-spacing: -10px;
+            margin-left: 20px ;
+        }
+        .score{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 20px;
+        }
+        .score img{
+            width: 10%;
+            margin: 0;
+        }
+        .score p{
+            display: flex;
+            margin: 0 3px;
+            font-size: 11px;
+            color: #b3b3b3;
+        }
+        .salesVolume{
+            font-size: 12px;
+            color: #454545;
+            text-align: left;
+            padding: 3px 25px;
+        }
+        .bonus{
+            background-color: #EEEEEE;
+            margin: 0 auto;
+            width: 170px;
+            text-align: right;
+        }
+        .bonus p{
+            display: inline-block;
+            bottom: 3px;
+            width: 30px;
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            background-color: #FF4C76;
+            border-radius: 15%;
+        }
+        .bonus .hour24{
+            background-color: #d62872;
+            width: 20px;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="product-group">
+        <div class="product">
+            <img src="ps5-1.webp" alt="ps5-光碟版">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>光碟主機 現貨快搶★</p>
+                【SONY 索尼】PS5 光碟版主機(CFI-1218A01)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                17,580
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(442)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 8,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-2.webp" alt="ps5蜘蛛人">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>滿1件折3900</p>
+                【SONY索尼】PS5蜘蛛人2 限量版同捆組
+            </h3>
+            <p class="price">
+                <span>$</span>
+                16,880
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(113)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 8,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-3.webp" alt="ps5-數位板">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>光碟主機 現貨快搶★</p>
+                【SONY 索尼】PS5 光碟版主機(CFI-1218A01)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                15,560
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(64)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 5,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-4.webp" alt="ps5太空戰士">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>滿1件折3900</p>
+                【SONY 索尼】PS5 太空戰士16 同捆組
+            </h3>
+            <p class="price">
+                <span>$</span>
+                15,480
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(40)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 100
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-5.webp" alt="ps5雙手把">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>雙手把充電座組</p>
+                【SONY 索尼】PS5 主機 雙手把同捆組 + 充電座
+            </h3>
+            <p class="price">
+                <span>$</span>
+                20,360
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(65)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 5,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-6.webp" alt="ps5雙手把">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>雙手把充電座組</p>
+                【SONY 索尼】PS5 雙手把同捆主機組(ASIA-00441 T)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                19,380
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(13)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 1,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-7.webp" alt="ps5無線控制器">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>突破限制的遊玩體驗</p>
+                【SONY 索尼】PS5 DualSense 原廠無線控制器(火山紅)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                2,280
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(60)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 50
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-12.webp" alt="ps5雙手把">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>PS5光碟機+熱門遊戲片</p>
+                【SONY 索尼】PS5 光碟版主機+PS4熱門遊戲多選一(送魔物手機支架)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                19,370
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(1)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    <br>
+                </p>
+            </div>
+            <div class="bonus">
+                <p>登記</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-9.webp" alt="ps5充電座">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p> <br> </p>
+                【SONY 索尼】PS5 DualSense 充電座(PlayStation 5 原廠周邊)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                980
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(159)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 5,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-10.webp" alt="ps5蜘蛛人2">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>防疫在家一起打電動</p>
+                【SONY 索尼】PS5 蜘蛛人2 限量版同捆組+豪華收納包+主機風扇直立架
+            </h3>
+            <p class="price">
+                <span>$</span>
+                22,600
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(1)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    <br>
+                </p>
+            </div>
+            <div class="bonus">
+                <p>登記</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-11.webp" alt="ps5無線控制器">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>突破限制的遊玩體驗</p>
+                【SONY 索尼】PS5 DualSense 原廠無線控制器(火山紅)
+            </h3>
+            <p class="price">
+                <span>$</span>
+                2,280
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(60)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 50
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ps5-8.webp" alt="ps5蜘蛛人">
+            <div class="picture-point">
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+            </div>
+            <h3>
+                <p>滿1件折100</p>
+                【SONY 索尼】PS5 遊戲《漫威蜘蛛人2 Marvels Spider-Man 2》中文版
+            </h3>
+            <p class="price">
+                <span>$</span>
+                1,990
+            </p>
+            <div class="score">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full.svg" alt="">
+                <img src="icon_star_full-0.5.svg" alt="">
+                <p>(60)</p>
+            </div>
+            <div class="salesVolume">
+                <p>
+                    總銷量 > 1,000
+                </p>
+            </div>
+            <div class="bonus">
+                <p class="hour24">速</p>
+                <p>登記</p>
+                <p>贈品</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
