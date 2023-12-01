@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: YakuHanJP, "游ゴシック Medium", YuGothic, YuGothicM,
+          "Noto Sans Japanese", sans-serif;
+      }
+      .news {
+        width: 1280px;
+        margin: auto;
+      }
+      .news-LATEST {
+        width: 1280px;
+        margin: auto;
+        border-top: 2px solid #222222;
+        font-size: 14px;
+      }
+      .news-group .news-title {
+        display: flex;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        margin-top: 50px;
+        align-items: end;
+      }
+      .news-group .news-title h2 {
+        padding: 20px 10px 0 0;
+        font-size: 26px;
+        color: #202124;
+      }
+      .news-group .news-title p {
+        color: #6c6d6e;
+        font-size: 14px;
+        flex-grow: 1;
+      }
+      .news-group .news-title a {
+        text-decoration: none;
+        color: #f65936;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .news-group .news-title a::after {
+        content: "➡︎";
+        color: #f65936;
+        border: 1px solid #f65936;
+        border-radius: 50%;
+        margin-left: 5px;
+        padding: 2px;
+      }
+      .news-items {
+        width: 1280px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+      }
+      .news-group .news-item {
+        width: 620px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        color: #202124;
+      }
+      a .sort {
+        display: flex;
+        padding: 25px 0 5px 0;
+      }
+      a .sort img {
+        width: 20px;
+        margin-right: 5px;
+      }
+      a .pic img {
+        width: 100%;
+        border-radius: 3%;
+      }
+      .news-item a .txt {
+        display: flex;
+        margin: 20px 0 100px 0;
+      }
+      .news-item a .txt h2 {
+        font-size: 24px;
+        color: #222222;
+      }
+      .news-item a .txt p {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        margin-left: 50px;
+        color: #222222;
+        flex-grow: 1;
+      }
+      .news-item a .txt span {
+        margin-top: auto;
+      }
+      .news-group .items-lists {
+        width: 620px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .items-lists .item {
+        position: relative;
+      }
+      .item .txt h2 {
+        font-size: 16px;
+        color: #222222;
+      }
+      .item .txt span {
+        position: absolute;
+        bottom: 0px;
+        font-size: 12px;
+        color: #222222;
+      }
+      section:nth-of-type(odd) .news-items {
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news">
+      <div class="news-LATEST">
+        <h2>LATEST</h2>
+      </div>
+      <section class="company">
+        <div class="news-group">
+          <div class="news-title">
+            <h2>旅行者にできること</h2>
+            <p>What Travelers Can Do</p>
+            <a href="#">すべて見る</a>
+          </div>
+          <div class="news-items">
+            <div class="news-item">
+              <a href="#">
+                <div class="sort">
+                  <img src="./pic/icon_ocean.svg" alt="" />
+                  <span>海</span>
+                </div>
+                <div class="pic">
+                  <img src="https://picsum.photos/300/200/?random=10" />
+                </div>
+                <div class="txt">
+                  <h2>11月はサンゴ白化啓発月間　〜日常でできること〜</h2>
+                  <p>
+                    世界のサンゴ礁を救うことを使命としている環境NGO団体コーラル・リーフ・アライアンス（The
+                    Coral Reef Alliance）は、2023年11月を「サ
+                    <span>2023.11.09</span>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="items-lists">
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="./pic/icon_ocean.svg" alt="" />
+                    <span>海</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>
+                      今年もアースデーにビーチクリーンを開催！今年もアースデーにビーチクリーンを開催！
+                    </h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="" alt="" />
+                    <span> &nbsp;</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>マウイ島の山火事救援金、日本円で受付開始</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="" alt="" />
+                    <span>&nbsp;</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>2023年7月後半～9月にハワイで開催</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="./pic/icon_ocean.svg" alt="" />
+                    <span>海</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>第46回プリンスロット•フラフェスティバル、7月に開催</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="travel">
+        <div class="news-group">
+          <div class="news-title">
+            <h2>旅行者にできること</h2>
+            <p>What Travelers Can Do</p>
+            <a href="#">すべて見る</a>
+          </div>
+          <div class="news-items">
+            <div class="news-item">
+              <a href="#">
+                <div class="sort">
+                  <img src="./pic/icon_ocean.svg" alt="" />
+                  <span>海</span>
+                </div>
+                <div class="pic">
+                  <img src="https://picsum.photos/300/200/?random=10" />
+                </div>
+                <div class="txt">
+                  <h2>11月はサンゴ白化啓発月間　〜日常でできること〜</h2>
+                  <p>
+                    世界のサンゴ礁を救うことを使命としている環境NGO団体コーラル・リーフ・アライアンス（The
+                    Coral Reef Alliance）は、2023年11月を「サ
+                    <span>2023.11.09</span>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="items-lists">
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="./pic/icon_ocean.svg" alt="" />
+                    <span>海</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>
+                      今年もアースデーにビーチクリーンを開催！今年もアースデーにビーチクリーンを開催！
+                    </h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="" alt="" />
+                    <span> &nbsp;</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>マウイ島の山火事救援金、日本円で受付開始</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="" alt="" />
+                    <span>&nbsp;</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>2023年7月後半～9月にハワイで開催</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <div class="sort">
+                    <img src="./pic/icon_ocean.svg" alt="" />
+                    <span>海</span>
+                  </div>
+                  <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=10" />
+                  </div>
+                  <div class="txt">
+                    <h2>第46回プリンスロット•フラフェスティバル、7月に開催</h2>
+                    <span>2023.11.09</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
