@@ -58,7 +58,7 @@ body {
 .news-items {
     width: 1280px;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding-bottom: 50px;
 }
 
@@ -114,7 +114,8 @@ a .pic img {
     width: 630px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
 }
 
 .items-lists .item {
@@ -124,6 +125,7 @@ a .pic img {
 .item .txt h2 {
     font-size: 16px;
     color: #222222;
+    margin-bottom: 20px;
 }
 
 .item .txt span {
