@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: YakuHanJP, "游ゴシック Medium", YuGothic, YuGothicM,
+        "Noto Sans Japanese", sans-serif;
+}
+
+.news {
+    width: 1280px;
+    margin: auto;
+}
+
+.news-LATEST {
+    width: 1280px;
+    margin: auto;
+    border-top: 2px solid #222222;
+    font-size: 14px;
+}
+
+.news-group .news-title {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    margin-top: 50px;
+    align-items: end;
+}
+
+.news-group .news-title h2 {
+    padding: 20px 10px 0 0;
+    font-size: 26px;
+    color: #202124;
+}
+
+.news-group .news-title p {
+    color: #6c6d6e;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.news-group .news-title a {
+    text-decoration: none;
+    color: #f65936;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.news-group .news-title a::after {
+    content: "➡︎";
+    color: #f65936;
+    border: 1px solid #f65936;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.news-items {
+    width: 1280px;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.news-group .news-item {
+    width: 630px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #202124;
+}
+
+a .sort {
+    display: flex;
+    padding: 25px 0 5px 0;
+}
+
+a .sort img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+a .pic img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+.news-item a .txt {
+    display: flex;
+    margin: 20px 0 100px 0;
+}
+
+.news-item a .txt h2 {
+    font-size: 24px;
+    color: #222222;
+}
+
+.news-item a .txt p {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    margin-left: 50px;
+    color: #222222;
+    flex-grow: 1;
+}
+
+.news-item a .txt span {
+    margin-top: auto;
+}
+
+.news-group .items-lists {
+    width: 630px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.items-lists .item {
+    position: relative;
+}
+
+.item .txt h2 {
+    font-size: 16px;
+    color: #222222;
+}
+
+.item .txt span {
+    position: absolute;
+    bottom: 0px;
+    font-size: 12px;
+    color: #222222;
+}
+
+section:nth-of-type(even) .news-items {
+    flex-direction: row-reverse;
+}
