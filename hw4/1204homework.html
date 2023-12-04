@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 960px;
+        margin: auto;
+      }
+      .wrap .car-group {
+        margin-bottom: 100px;
+        position: relative;
+      }
+      .wrap .car-group .txt .title {
+        padding-bottom: 332px;
+      }
+      .wrap .car-group .txt .title h2 {
+        display: inline-block;
+        width: 336px;
+        font-size: 50px;
+        color: #ffffff;
+        font-weight: 200;
+        background-color: crimson;
+      }
+      .wrap .car-group .txt .title h2 span {
+        display: inline-block;
+        width: 120px;
+        font-size: 120px;
+        transform: rotate(90deg);
+      }
+      .wrap .car-group .txt .title .describe {
+        background-color: #000000;
+        width: 35%;
+        line-height: 1.5;
+      }
+      .wrap .car-group .txt .title .describe p {
+        color: #ffffff;
+        padding: 0 15px 30px 15px;
+      }
+      .wrap .car-group .txt .title .describe h3 {
+        font-size: 28px;
+        color: #ffffff;
+        padding: 20px 15px 0 15px;
+      }
+      .wrap .car-group .txt .renew {
+        width: 768px;
+        margin-left: 50px;
+        background-color: whitesmoke;
+      }
+      .wrap .car-group .txt .renew h2 {
+        font-size: 26px;
+        color: crimson;
+        padding-top: 15px;
+        margin: 0 0 0 15px;
+      }
+      .wrap .car-group .txt .renew .lists h3 {
+        display: inline-block;
+        font-size: 18px;
+        color: azure;
+        background-color: #000000;
+        border-radius: 5%;
+        padding: 0 5px 0 5px;
+        margin-left: 15px;
+      }
+      .wrap .car-group .txt .renew .lists p {
+        margin: 0 15px 0 15px;
+      }
+      .wrap .car-group .txt .renew h2::after {
+        content: "";
+        display: inline-block;
+        width: 55%;
+        height: 2px;
+        background-color: crimson;
+        vertical-align: middle;
+      }
+      .wrap .car-group .txt .renew p::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        vertical-align: middle;
+        border-radius: 100%;
+      }
+      .wrap .car-group .pic img:nth-child(1) {
+        width: 840px;
+        position: absolute;
+        top: 138px;
+        left: 15%;
+        z-index: -1;
+      }
+      .wrap .car-group .pic img:nth-child(2) {
+        width: 5%;
+        position: absolute;
+        left: 100%;
+        top: 45%;
+      }
+      .wrap .car-group .pic .gray-block {
+        width: 450px;
+        height: 250px;
+        background-color: whitesmoke;
+        position: absolute;
+        top: 5%;
+        left: 70%;
+        z-index: -2;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrap">
+      <div class="car-group">
+        <div class="txt">
+          <div class="title">
+            <h2><span>01</span>操控樂趣</h2>
+            <div class="describe">
+              <h3>人人滿意的駕駛體驗</h3>
+              <p>
+                透過最佳重量分配，實現平順起步，直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。
+              </p>
+            </div>
+          </div>
+          <div class="renew">
+            <h2>因為我們做了這些革新</h2>
+            <div class="lists">
+              <h3>低重心設計</h3>
+              <p>
+                透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。
+                車體剛性強化・
+              </p>
+              <h3>車體剛性強化</h3>
+              <p>
+                車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。
+              </p>
+              <h3>四輪獨立懸吊</h3>
+              <p>
+                搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="./pic/1.jpg" alt="toyota" />
+          <img src="./pic/youtube.png" alt="youtube" />
+          <div class="gray-block"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
