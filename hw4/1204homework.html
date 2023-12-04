@@ -18,6 +18,8 @@
         position: relative;
       }
       .wrap .car-group .txt .title {
+        display: flex;
+        flex-direction: column;
         padding-bottom: 332px;
       }
       .wrap .car-group .txt .title h2 {
@@ -36,7 +38,7 @@
       }
       .wrap .car-group .txt .title .describe {
         background-color: #000000;
-        width: 35%;
+        width: 336px;
         line-height: 1.5;
       }
       .wrap .car-group .txt .title .describe p {
@@ -71,12 +73,16 @@
       .wrap .car-group .txt .renew .lists p {
         margin: 0 15px 0 15px;
       }
+      .wrap .car-group .txt .renew .lists p:last-of-type {
+        padding-bottom: 20px;
+      }
       .wrap .car-group .txt .renew h2::after {
         content: "";
         display: inline-block;
         width: 55%;
         height: 2px;
         background-color: crimson;
+        margin-left: 10px;
         vertical-align: middle;
       }
       .wrap .car-group .txt .renew p::before {
@@ -109,6 +115,25 @@
         top: 5%;
         left: 70%;
         z-index: -2;
+      }
+      .wrap .car-group:nth-of-type(even) .title {
+        padding-left: 70%;
+        padding-bottom: 315px;
+      }
+      .wrap .car-group:nth-of-type(even) .pic :nth-child(1) {
+        left: 0;
+      }
+      .wrap .car-group:nth-of-type(even) .txt .renew {
+        margin-left: 25%;
+      }
+      .wrap .car-group:nth-of-type(even) .pic :nth-child(2) {
+        left: -20px;
+      }
+      .wrap .car-group:nth-of-type(even) .pic .gray-block {
+        left: 30%;
+      }
+      .wrap .car-group:nth-of-type(3) .title {
+        padding-bottom: 293px;
       }
     </style>
   </head>
@@ -146,6 +171,72 @@
         </div>
         <div class="pic">
           <img src="./pic/1.jpg" alt="toyota" />
+          <img src="./pic/youtube.png" alt="youtube" />
+          <div class="gray-block"></div>
+        </div>
+      </div>
+      <div class="car-group">
+        <div class="txt">
+          <div class="title">
+            <h2><span>02</span>安全守護</h2>
+            <div class="describe">
+              <h3>行車更安心的高剛性車體</h3>
+              <p>
+                您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程，毫無後顧之憂。
+              </p>
+            </div>
+          </div>
+          <div class="renew">
+            <h2>因為我們做了這些革新</h2>
+            <div class="lists">
+              <h3>主動安全</h3>
+              <p>
+                可以先進的TSS系統主動偵測路況，輔助駕駛判斷路況並維持行車安全。
+              </p>
+              <h3>被動安全</h3>
+              <p>
+                堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="https://picsum.photos/300/200/?random=10" />
+          <img src="./pic/youtube.png" alt="youtube" />
+          <div class="gray-block"></div>
+        </div>
+      </div>
+      <div class="car-group">
+        <div class="txt">
+          <div class="title">
+            <h2><span>03</span>乘坐舒適</h2>
+            <div class="describe">
+              <h3>令人放鬆舒適的車室空間</h3>
+              <p>
+                車室空間設計著重人體工學，透過方向盤，踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛疲勞的舒適駕馭體驗。
+              </p>
+            </div>
+          </div>
+          <div class="renew">
+            <h2>因為我們做了這些革新</h2>
+            <div class="lists">
+              <h3>駕駛位置最佳化</h3>
+              <p>
+                針對駕駛位置進行徹底的修改，讓駕駛者可如同握手般自然且舒適地操控方向盤。
+              </p>
+              <h3>駕馭視野佳</h3>
+              <p>
+                考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕取安全。
+              </p>
+              <h3>更寧靜的車室</h3>
+              <p>
+                採用最新三層結構的隔音材料，與引擎，變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pic">
+          <img src="https://picsum.photos/300/200/?random=10" />
           <img src="./pic/youtube.png" alt="youtube" />
           <div class="gray-block"></div>
         </div>
