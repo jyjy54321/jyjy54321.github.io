@@ -17,9 +17,10 @@
         margin-bottom: 100px;
         position: relative;
       }
+      .wrap .car-group .txt {
+        position: relative;
+      }
       .wrap .car-group .txt .title {
-        display: flex;
-        flex-direction: column;
         padding-bottom: 332px;
       }
       .wrap .car-group .txt .title h2 {
@@ -56,10 +57,12 @@
         background-color: whitesmoke;
       }
       .wrap .car-group .txt .renew h2 {
+        display: flex;
         font-size: 26px;
         color: crimson;
         padding-top: 15px;
         margin: 0 0 0 15px;
+        align-items: center;
       }
       .wrap .car-group .txt .renew .lists h3 {
         display: inline-block;
@@ -72,27 +75,29 @@
       }
       .wrap .car-group .txt .renew .lists p {
         margin: 0 15px 0 15px;
+        text-indent: -1em;
       }
       .wrap .car-group .txt .renew .lists p:last-of-type {
         padding-bottom: 20px;
       }
       .wrap .car-group .txt .renew h2::after {
         content: "";
-        display: inline-block;
-        width: 55%;
+        display: block;
+        width: 20px;
         height: 2px;
         background-color: crimson;
         margin-left: 10px;
-        vertical-align: middle;
+        flex-grow: 1;
       }
       .wrap .car-group .txt .renew p::before {
         content: "";
         display: inline-block;
-        width: 5px;
-        height: 5px;
+        width: 1em;
+        height: 1em;
         background-color: red;
         vertical-align: middle;
-        border-radius: 100%;
+        border-radius: 50%;
+        scale: 0.3;
       }
       .wrap .car-group .pic img:nth-child(1) {
         width: 840px;
