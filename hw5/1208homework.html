@@ -8,6 +8,229 @@
       * {
         margin: 0;
         padding: 0;
+        font-family: Roboto, sans-serif;
+      }
+      .wrap {
+        width: 1200px;
+        margin: auto;
+      }
+      .wrap header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .wrap header nav .logo {
+        width: 100%;
+      }
+      .wrap header nav .links {
+        display: flex;
+        padding: 0 10px 0 10px;
+        gap: 30px;
+        align-items: center;
+      }
+      .wrap header nav .links :nth-child(1) {
+        border-bottom: 0.5px solid #adb6c7;
+      }
+      .wrap header nav .links a {
+        white-space: nowrap; /* 字不換行 */
+        text-decoration: none;
+        font-size: 16px;
+        color: #5d6678;
+        transition: 0.3s;
+      }
+      .wrap header nav .links a:hover {
+        border-bottom: 0.5px solid #adb6c7;
+      }
+      .wrap header nav .links .subscribe-button .btn {
+        border: 1px solid #dcdfe5;
+        font-size: 14px;
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 5%;
+        font-weight: 600;
+        transition: 0.5s;
+      }
+      .wrap header nav .links .subscribe-button {
+        margin-left: 20px;
+      }
+      .wrap header nav .links .subscribe-button .btn:hover {
+        background-color: #1fde82;
+        color: #ffffff;
+      }
+      .wrap header {
+        margin-bottom: 50px;
+        background-color: #ffffff;
+        position: sticky;
+        top: 0;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item {
+        display: flex;
+        margin-bottom: 60px;
+        gap: 20px;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .txt {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        padding: 10px;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .txt h2 {
+        margin: 60px 0 20px 0;
+        padding: px;
+        width: 520px;
+        font-size: 58px;
+        color: #1d273b;
+        font-weight: 300;
+        line-height: 1.3;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .txt p {
+        display: flex;
+        flex-grow: 1;
+        width: 400px;
+        font-size: 14px;
+        color: #5d6678;
+        line-height: 1.5;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .txt .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        gap: 10px;
+      }
+      .wrap .service-introduction .buttons .green-btn {
+        text-decoration: none;
+        border-radius: 5%;
+        background-color: #1fde82;
+        color: #ffffff;
+        font-size: 14px;
+        margin: 10px 10px 10px 0px;
+        border: 1px solid #dcdfe5;
+        text-align: center;
+        padding: 12px;
+        border-radius: 5%;
+        font-weight: 600;
+        transition: 0.5s;
+        box-shadow: 0px 2px 15px #1fde82;
+      }
+      .wrap .service-introduction .buttons .green-btn:hover {
+        background-color: #3b3d42;
+        box-shadow: none;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .txt .buttons img {
+        width: 100%;
+        margin: 10px;
+      }
+      .wrap .service-introduction .slogan-group .slogan-item .pic {
+        padding: 10px;
+      }
+      .wrap section .btn {
+        border: 1px solid #dcdfe5;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 12px;
+        text-align: center;
+        border-radius: 5%;
+        font-weight: 600;
+        color: #5d6678;
+        transition: 0.5s;
+        margin: 10px;
+      }
+      .wrap section .btn:hover {
+        background-color: #1fde82;
+        color: #ffffff;
+      }
+      .wrap .service-introduction .slogan-group :nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .wrap .service-introduction .slogan-group :nth-child(even) .txt h2 {
+        width: 500px;
+        font-size: 42px;
+      }
+      .wrap .serve-group {
+        margin-bottom: 60px;
+      }
+      .wrap .serve-group h2 {
+        width: 500px;
+        color: #1d273b;
+        font-size: 42px;
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+      .wrap .serve-group .serve-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+      }
+      .wrap .serve-group .serve-list .serve-item {
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.5fr;
+        background-color: #ffffff;
+      }
+      .wrap .serve-group .serve-list .serve-item .pic {
+        width: 100%;
+        margin: 25px 0 25px 0;
+      }
+      .wrap .serve-group .serve-list .serve-item .pic img {
+        box-shadow: 0px 2px 15px #1fde82;
+        border-radius: 50%;
+      }
+      .wrap .serve-group .serve-list .serve-item h3 {
+        font-size: 23px;
+        font-weight: 300;
+        color: #1d273b;
+        line-height: 2;
+      }
+      .wrap .serve-group .serve-list .serve-item p {
+        font-size: 14px;
+        color: #5d6678;
+        line-height: 1.5;
+        width: 300px;
+      }
+      .wrap .serve-group .serve-list .serve-item .read a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #3b3d42;
+      }
+      .wrap .service-introduction .question-connect {
+        display: flex;
+        margin-bottom: 60px;
+        gap: 20px;
+      }
+      .wrap .service-introduction .question-connect .txt {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        padding: 10px;
+      }
+      .wrap .service-introduction .question-connect .txt h2 {
+        margin: 60px 0 20px 0;
+        padding: px;
+        width: 450px;
+        font-size: 42px;
+        color: #1d273b;
+        font-weight: 300;
+        line-height: 1.3;
+      }
+      .wrap .service-introduction .question-connect .txt p {
+        display: flex;
+        flex-grow: 1;
+        width: 400px;
+        font-size: 14px;
+        color: #5d6678;
+        line-height: 1.5;
+      }
+      .wrap .service-introduction .question-connect .txt .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        gap: 10px;
+      }
+      .wrap .service-introduction .question-connect .pic {
+        padding: 10px;
+      }
+      .wrap .service-introduction .question-connect .pic img {
+        width: 100%;
       }
     </style>
   </head>
@@ -26,7 +249,7 @@
             <a href="#">Case studio</a>
             <a href="#">Contacts</a>
             <div class="subscribe-button">
-              <p>SUBSCRIBE</p>
+              <a href="#" class="btn">SUBSCRIBE</a>
             </div>
           </div>
         </nav>
@@ -35,13 +258,13 @@
         <div class="slogan-group">
           <div class="slogan-item">
             <div class="txt">
-              <h1>Our creativity is your success</h1>
+              <h2>Our creativity is your success</h2>
               <p>
                 We break all boundaries if they happen on our way of project’s
                 development!
               </p>
               <div class="buttons">
-                <p>LEARN MORE</p>
+                <a href="#" class="green-btn">LEARN MORE</a>
                 <img src="./pic/asset 1.svg" alt="" />
               </div>
             </div>
@@ -58,12 +281,12 @@
                 is as important to us as aesthetics.
               </p>
               <div class="buttons">
-                <p>ABOUT US</p>
-                <p>CONTACT US</p>
+                <a href="#" class="green-btn">ABOUT US</a>
+                <a href="#" class="btn">CONTACT US</a>
               </div>
             </div>
             <div class="pic">
-              <img src="./pic/asset 3.svg" alt="" />
+              <img src="./pic/asset 3.webp" alt="" />
             </div>
           </div>
         </div>
@@ -81,6 +304,8 @@
                   A great brand combines design and conveys company’s value
                   messaging to evoke emotion and drive strategy.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -89,11 +314,13 @@
                 <img src="./pic/asset 5.svg" alt="" />
               </div>
               <div class="txt">
-                <h3>Web Design & Brending</h3>
+                <h3>Graphic Design</h3>
                 <p>
-                  A great brand combines design and conveys company’s value
-                  messaging to evoke emotion and drive strategy.
+                  Rich experience plus unlimited imagination create our
+                  successful service discovered by clients.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -102,11 +329,13 @@
                 <img src="./pic/asset 6.svg" alt="" />
               </div>
               <div class="txt">
-                <h3>Web Design & Brending</h3>
+                <h3>Video Production</h3>
                 <p>
-                  A great brand combines design and conveys company’s value
-                  messaging to evoke emotion and drive strategy.
+                  Creating and handling professional video is our strong point.
+                  It plays major role in your digital business strategy.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -115,11 +344,13 @@
                 <img src="./pic/SEO.svg" alt="" />
               </div>
               <div class="txt">
-                <h3>Web Design & Brending</h3>
+                <h3>SEO</h3>
                 <p>
-                  A great brand combines design and conveys company’s value
-                  messaging to evoke emotion and drive strategy.
+                  We provide everything your site needs to perform at it’s
+                  highest capabilities on the major search engines.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -128,11 +359,13 @@
                 <img src="./pic/Dig.svg" alt="" />
               </div>
               <div class="txt">
-                <h3>Web Design & Brending</h3>
+                <h3>Digital Marketing</h3>
                 <p>
-                  A great brand combines design and conveys company’s value
-                  messaging to evoke emotion and drive strategy.
+                  We do collateral design, interactive design, hoarding,
+                  signage, presentation centres, and more.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -141,11 +374,13 @@
                 <img src="./pic/info.svg" alt="" />
               </div>
               <div class="txt">
-                <h3>Web Design & Brending</h3>
+                <h3>Infographics</h3>
                 <p>
-                  A great brand combines design and conveys company’s value
-                  messaging to evoke emotion and drive strategy.
+                  Turn your data into captivating artwork that will keep your
+                  audience engaged. Our team can help you with it.
                 </p>
+              </div>
+              <div class="read">
                 <a href="#">READ MORE</a>
               </div>
             </div>
@@ -160,8 +395,8 @@
               services.
             </p>
             <div class="buttons">
-              <p>CONTACT US</p>
-              <p>SUBSCRIBE</p>
+              <a href="#" class="green-btn">CONTACT US</a>
+              <a href="#" class="btn">SUBSCRIBE</a>
             </div>
           </div>
           <div class="pic">
