@@ -11,14 +11,16 @@
         font-family: Roboto, sans-serif;
       }
       .wrap {
-        width: 1200px;
         margin: auto;
       }
       .wrap header nav {
+        width: 1200px;
+        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 10px;
+        box-sizing: border-box;
       }
       .wrap header nav .logo {
         width: 100%;
@@ -63,6 +65,10 @@
         background-color: #ffffff;
         position: sticky;
         top: 0;
+      }
+      .wrap .service-introduction {
+        width: 1200px;
+        margin: auto;
       }
       .wrap .service-introduction .slogan-group .slogan-item {
         display: flex;
@@ -231,6 +237,249 @@
       }
       .wrap .service-introduction .question-connect .pic img {
         width: 100%;
+      }
+      .wrap .work-introduction .rating-data {
+        background-color: #2570ff;
+      }
+      .wrap .work-introduction .rating-data .data-container {
+        width: 1200px;
+        padding: 55px 0 55px 0;
+        display: flex;
+        gap: 55px;
+        margin: auto;
+      }
+      .wrap .work-introduction .rating-data .data-container .data-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 600px;
+      }
+      .wrap
+        .work-introduction
+        .rating-data
+        .data-container
+        .data-list
+        .data-item {
+        padding: 30px;
+        background-color: #3f81ff;
+        border-radius: 5%;
+      }
+      .wrap
+        .work-introduction
+        .rating-data
+        .data-container
+        .data-list
+        .data-item
+        span {
+        font-size: 58px;
+        color: #ffffff;
+        line-height: 1.5;
+      }
+      .wrap
+        .work-introduction
+        .rating-data
+        .data-container
+        .data-list
+        .data-item
+        p {
+        font-size: 14px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        line-height: 2;
+      }
+      .wrap .work-introduction .rating-data .data-container .question {
+        display: flex;
+        flex-direction: column;
+      }
+      .wrap .work-introduction .rating-data .data-container .question h2 {
+        font-size: 42px;
+        color: #ffffff;
+        font-weight: 300;
+        line-height: 1.3;
+        padding: 50px 0 25px 0;
+      }
+      .wrap .work-introduction .rating-data .data-container .question p {
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 2;
+        flex-grow: 1;
+      }
+      .wrap .work-introduction .rating-data .data-container .question .buttons {
+        border: 1px solid #dcdfe5;
+        width: 120px;
+        font-size: 14px;
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 5%;
+        font-weight: 600;
+        transition: 0.5s;
+      }
+      .wrap
+        .work-introduction
+        .rating-data
+        .data-container
+        .question
+        .blue-btn {
+        font-size: 14px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .wrap
+        .work-introduction
+        .rating-data
+        .data-container
+        .question
+        .buttons:hover {
+        background-color: #1fde82;
+        color: #ffffff;
+      }
+      .wrap .work-introduction .work-group {
+        width: 1200px;
+        margin: auto;
+        padding: 80px 10px 80px 10px;
+        box-sizing: border-box;
+      }
+
+      .wrap .work-introduction .work-group h2 {
+        font-size: 42px;
+        color: #1d273b;
+        font-weight: 300;
+        padding-bottom: 50px;
+      }
+      .wrap .work-introduction .work-group .steps-group .steps-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        padding: 10px;
+      }
+      .wrap .work-introduction .work-group .steps-group .steps-item .pic img {
+        width: 100%;
+      }
+      .wrap .work-introduction .work-group .steps-group .steps-item .content {
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        align-items: center;
+      }
+      .wrap
+        .work-introduction
+        .work-group
+        .steps-group
+        .steps-item
+        .content
+        h3 {
+        font-size: 22px;
+        color: #1d273b;
+        font-weight: 300;
+        line-height: 1.3;
+        padding-bottom: 10px;
+      }
+      .wrap .work-introduction .work-group .steps-group .steps-item .content p {
+        font-size: 14px;
+        color: #5d6678;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      .wrap .work-introduction .work-group .steps-group :nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .wrap .work-introduction .projects-group .title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap .work-introduction .projects-group .button {
+        align-self: center;
+      }
+      .wrap .work-introduction .projects-group .button .btn {
+        text-decoration: none;
+        border-radius: 5%;
+        background-color: #1fde82;
+        color: #ffffff;
+        font-size: 14px;
+        margin: 0px;
+        border: 1px solid #dcdfe5;
+        text-align: center;
+        padding: 12px;
+        border-radius: 5%;
+        font-weight: 300;
+        transition: 0.5s;
+        box-shadow: 0px 2px 15px #1fde82;
+      }
+      .wrap .work-introduction .projects-group .button .btn:hover {
+        background-color: #3b3d42;
+        box-shadow: none;
+      }
+      .wrap .work-introduction .projects-group .projects-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .wrap .work-introduction .projects-group .projects-items .item {
+        position: relative;
+      }
+      .wrap .work-introduction .projects-group .projects-items .item img {
+        width: 100%;
+        border-radius: 5%;
+      }
+      .wrap
+        .work-introduction
+        .projects-group
+        .projects-items
+        .item
+        .item-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px 20px 85px;
+        border-radius: 5%;
+        background-color: #1fde82fa;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .wrap
+        .work-introduction
+        .projects-group
+        .projects-items
+        .item
+        .item-hover
+        h3 {
+        font-size: 40px;
+        color: #ffffff;
+        margin: 30px 0 150px;
+        font-weight: 300;
+      }
+      .wrap
+        .work-introduction
+        .projects-group
+        .projects-items
+        .item
+        .item-hover
+        .button
+        .hover-btn {
+        font-size: 14px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .wrap
+        .work-introduction
+        .projects-group
+        .projects-items
+        .item
+        .item-hover
+        .button
+        .hover-btn:hover {
+        color: #5d6678;
+        font-weight: 300;
+      }
+      .wrap
+        .work-introduction
+        .projects-group
+        .projects-items
+        .item
+        .item-hover:hover {
+        opacity: 1;
       }
     </style>
   </head>
@@ -406,37 +655,44 @@
       </section>
       <section class="work-introduction">
         <div class="rating-data">
-          <div class="data-list">
-            <div class="data-item">
-              <span>1880+</span>
-              <p>Completed projects to the end by our specialists.</p>
-              <span></span>
+          <div class="data-container">
+            <div class="data-list">
+              <div class="data-item">
+                <span>1880+</span>
+                <p>Completed projects to the end by our specialists.</p>
+                <span></span>
+              </div>
+              <div class="data-item">
+                <span>56</span>
+                <p>A large team of the best <br />specialists.</p>
+              </div>
+              <div class="data-item">
+                <span>2000+</span>
+                <p>Customers who were satisfied with our work.</p>
+              </div>
+              <div class="data-item">
+                <span>100%</span>
+                <p>Our values are good organization and result orientation.</p>
+              </div>
             </div>
-            <div class="data-item">
-              <span>56</span>
-              <p>A large team of the best specialists.</p>
-            </div>
-            <div class="data-item">
-              <span>2000+</span>
-              <p>Customers who were satisfied with our work.</p>
-            </div>
-            <div class="data-item">
-              <span>100%</span>
-              <p>Our values are good organization and result orientation.</p>
-            </div>
-          </div>
-          <div class="question">
-            <h2>Why choose our studio for your projects?</h2>
-            <p>
-              We are a command of professional and enthusiastic people, who like
-              what they do and are always in the process of growing and
-              improving their skills.
-            </p>
-            <div class="buttons">
-              <p>ORDER SERVICE</p>
+            <div class="question">
+              <h2>
+                Why choose our <br />
+                studio for your <br />
+                projects?
+              </h2>
+              <p>
+                We are a command of professional and enthusiastic <br />
+                people, who like what they do and are always in the process of
+                growing and improving their skills.
+              </p>
+              <div class="buttons">
+                <a href="#" class="blue-btn">ORDER SERVICE</a>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="work-group">
           <h2>Steps of our work</h2>
           <div class="steps-group">
@@ -452,7 +708,7 @@
                   <h3>Meeting With The Customer</h3>
                   <p>
                     The first meeting is very import to form contact and discuss
-                    the main ideas of the project.
+                    <br />the main ideas of the project.
                   </p>
                 </div>
               </div>
@@ -466,10 +722,13 @@
                   <img src="./pic/02.svg" alt="" />
                 </div>
                 <div class="txt">
-                  <h3>We Consider And Analyze The Work Plan</h3>
+                  <h3>
+                    We Consider And Analyze <br />
+                    The Work Plan
+                  </h3>
                   <p>
-                    When we understand the main eideas, we proceed to discussing
-                    the work plan and analyzing it.
+                    When we understand the main eideas, we proceed to
+                    <br />discussing the work plan and analyzing it.
                   </p>
                 </div>
               </div>
@@ -486,6 +745,7 @@
                   <h3>Work Hard On The Project</h3>
                   <p>
                     Our professional team start to handle with your project and
+                    <br />
                     embody the conception of the project.
                   </p>
                 </div>
@@ -500,9 +760,13 @@
                   <img src="./pic/04.svg" alt="" />
                 </div>
                 <div class="txt">
-                  <h3>Once Again We Analyze And Check Everything</h3>
+                  <h3>
+                    Once Again We Analyze And <br />
+                    Check Everything
+                  </h3>
                   <p>
                     We meet, analyze and check the done work and make needed
+                    <br />
                     corrections.
                   </p>
                 </div>
@@ -517,31 +781,56 @@
                   <img src="./pic/05.svg" alt="" />
                 </div>
                 <div class="txt">
-                  <h3>We Finish The Work And Give It To The Customer</h3>
+                  <h3>
+                    We Finish The Work And Give <br />
+                    It To The Customer
+                  </h3>
                   <p>
                     The project is ready and we give it to the customer. Also we
-                    ask for the feedback from the customer.
+                    ask <br />
+                    for the feedback from the customer.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="topics-group">
+          <div class="projects-group">
             <div class="title">
-              <h2>Our team's work with Projects</h2>
+              <h2>
+                Our team's work with <br />
+                Projects
+              </h2>
               <div class="button">
-                <p>ALL PROJECTS</p>
+                <a href="" class="btn">ALL PROJECTS</a>
               </div>
             </div>
-            <div class="topics-items">
+            <div class="projects-items">
               <div class="item">
                 <img src="./pic/project-1.jpg" alt="" />
+                <div class="item-hover">
+                  <h3>Minimal Creative "Impuls"</h3>
+                  <div class="button">
+                    <a href="" class="hover-btn">VIEW SITE</a>
+                  </div>
+                </div>
               </div>
               <div class="item">
                 <img src="./pic/project-2.jpg" alt="" />
+                <div class="item-hover">
+                  <h3>Travel Company "Tour Up"</h3>
+                  <div class="button">
+                    <a href="" class="hover-btn">VIEW SITE</a>
+                  </div>
+                </div>
               </div>
               <div class="item">
                 <img src="./pic/project-3.jpg" alt="" />
+                <div class="item-hover">
+                  <h3>Restaurant Pizza "Little Italy"</h3>
+                  <div class="button">
+                    <a href="" class="hover-btn">VIEW SITE</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
