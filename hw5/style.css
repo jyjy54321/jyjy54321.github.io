@@ -131,7 +131,7 @@ img {
 
 .wrap .service-introduction .slogan-group .slogan-item .txt .buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr 300px;
     gap: 10px;
 }
 
