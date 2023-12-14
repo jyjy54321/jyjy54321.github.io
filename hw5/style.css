@@ -131,20 +131,20 @@ img {
 
 .wrap .service-introduction .slogan-group .slogan-item .txt .buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 300px;
+    grid-template-columns: 1fr 1fr 1.5fr;
     gap: 10px;
 }
 
 .wrap .service-introduction .buttons .green-btn {
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 4px;
     background-color: #1fde82;
     color: #ffffff;
     font-size: 14px;
     margin: 10px 10px 10px 0px;
     border: 1px solid #dcdfe5;
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     border-radius: 5%;
     font-weight: 600;
     transition: 0.5s;
