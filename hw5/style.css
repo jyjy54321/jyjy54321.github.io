@@ -4,6 +4,10 @@
     font-family: Roboto, sans-serif;
 }
 
+img {
+    vertical-align: bottom;
+}
+
 .wrap {
     margin: auto;
 }
@@ -22,7 +26,7 @@
     box-sizing: border-box;
 }
 
-.wrap header nav .logo {
+.wrap header nav .logo img {
     width: 100%;
 }
 
@@ -221,7 +225,7 @@
 
 .wrap .serve-group .serve-list .serve-item {
     display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 2ex;
     background-color: #ffffff;
     padding: 40px;
     border-radius: 5%;
@@ -379,34 +383,6 @@
     bottom: -330px;
 }
 
-.wrap .work-introduction .rating-data .pic13 {
-    width: 190px;
-    position: absolute;
-    left: 475px;
-    bottom: -540px;
-}
-
-.wrap .work-introduction .rating-data .pic14 {
-    width: 290px;
-    position: absolute;
-    left: 440px;
-    bottom: -850px;
-}
-
-.wrap .work-introduction .rating-data .pic15 {
-    width: 340px;
-    position: absolute;
-    left: 390px;
-    bottom: -1110px;
-}
-
-.wrap .work-introduction .rating-data .pic16 {
-    width: 330px;
-    position: absolute;
-    left: 370px;
-    bottom: -1370px;
-}
-
 .wrap .work-introduction .rating-data .pic17 {
     position: absolute;
     left: 0;
@@ -416,7 +392,7 @@
 .wrap .work-introduction .rating-data .pic18 {
     position: absolute;
     right: 0;
-    bottom: -2494px;
+    bottom: -2468px;
 }
 
 .wrap .work-introduction .rating-data .pic19 {
@@ -543,9 +519,54 @@
     flex-direction: row;
     gap: 28px;
     align-items: center;
+    position: relative;
 }
 
-.wrap .work-introduction .work-group .steps-group .steps-item .content img {
+.wrap .work-introduction .work-group .steps-group :nth-child(1) .content .txt::after {
+    content: '';
+    background-image: url(./pic/arrow-1.svg);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    right: 350px;
+    background-repeat: no-repeat;
+}
+
+.wrap .work-introduction .work-group .steps-group :nth-child(2) .content .txt::after {
+    content: '';
+    background-image: url(./pic/arrow-2.svg);
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    right: -20px;
+    background-repeat: no-repeat;
+}
+
+.wrap .work-introduction .work-group .steps-group :nth-child(3) .content .txt::after {
+    content: '';
+    background-image: url(./pic/arrow-3.svg);
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 150px;
+    right: 475px;
+    background-repeat: no-repeat;
+}
+
+.wrap .work-introduction .work-group .steps-group :nth-child(4) .content .txt::after {
+    content: '';
+    background-image: url(./pic/arrow-4.svg);
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 190px;
+    right: 50px;
+    background-repeat: no-repeat;
+}
+
+.wrap .work-introduction .work-group .steps-group .steps-item .content img:nth-child(1) {
     width: 100%;
     box-shadow: 0px 2px 15px #1fde82;
     border-radius: 50%;
