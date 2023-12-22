@@ -37,9 +37,9 @@
     <script>
       const numInput = document.getElementById("num-input");
       const message = document.querySelector(".message");
-      const btn1 = document.querySelector(".btn-group :nth-child(1)");
-      const btn2 = document.querySelector(".btn-group :nth-child(2)");
-      const btn3 = document.querySelector(".btn-group :nth-child(3)");
+      const btn_guess = document.querySelector(".btn-group :nth-child(1)");
+      const btn_restart = document.querySelector(".btn-group :nth-child(2)");
+      const btn_answer = document.querySelector(".btn-group :nth-child(3)");
 
       function getRandomNum(min, max) {
         min = Math.ceil(min);
@@ -50,7 +50,7 @@
       let max = 100;
       let min = 1;
 
-      btn1.addEventListener("click", function (e) {
+      btn_guess.addEventListener("click", function (e) {
         let numGuess = parseInt(numInput.value);
         while (isNaN(numGuess) || numGuess >= max || numGuess <= min) {
           alert(`請正確輸入${min} ~ ${max}之間的數字`);
@@ -71,13 +71,14 @@
         }
       });
 
-      btn2.addEventListener("click", function (e) {
+      btn_restart.addEventListener("click", function (e) {
         max = 100;
         min = 1;
         answer = getRandomNum(1, 100);
         message.innerText = `請輸入${min} ~ ${max}之間的數字`;
+        numInput.value = "";
       });
-      btn3.addEventListener("click", function (e) {
+      btn_answer.addEventListener("click", function (e) {
         alert(`投降了吧~答案是${answer}`);
       });
     </script>
