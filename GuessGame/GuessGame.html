@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuessGame</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .game {
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    .btn {
+      font-size: 18px;
+      width: 90px;
+    }
+  </style>
+  <body>
+    <div class="game">
+      <h1>猜數字遊戲</h1>
+      <input id="num-input" type="text" placeholder="請輸入數字" />
+      <p class="message">請輸入1 ~ 100之間的數字</p>
+      <div class="btn-group">
+        <button class="btn">猜!</button>
+        <button class="btn">重新開始</button>
+        <button class="btn">看答案</button>
+      </div>
+    </div>
+
+    <script>
+      const numInput = document.getElementById("num-input");
+      const message = document.querySelector(".message");
+      const btn1 = document.querySelector(".btn-group :nth-child(1)");
+      const btn2 = document.querySelector(".btn-group :nth-child(2)");
+      const btn3 = document.querySelector(".btn-group :nth-child(3)");
+
+      function getRandomNum(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+      let answer = getRandomNum(1, 100);
+      let max = 100;
+      let min = 1;
+
+      btn1.addEventListener("click", function (e) {
+        let numGuess = parseInt(numInput.value);
+        while (isNaN(numGuess) || numGuess >= max || numGuess <= min) {
+          alert(`請正確輸入${min} ~ ${max}之間的數字`);
+          return;
+        }
+        if (numGuess != answer) {
+          if (numGuess < answer) {
+            min = numGuess;
+            alert(`答錯囉，請輸入${min} ~ ${max}之間的數字`);
+            message.innerText = `請輸入${min} ~ ${max}之間的數字`;
+          } else {
+            max = numGuess;
+            alert(`答錯囉，請輸入${min} ~ ${max}之間的數字`);
+            message.innerText = `請輸入${min} ~ ${max}之間的數字`;
+          }
+        } else {
+          alert(`答對了! 答案是${answer}`);
+        }
+      });
+
+      btn2.addEventListener("click", function (e) {
+        max = 100;
+        min = 1;
+        answer = getRandomNum(1, 100);
+        message.innerText = `請輸入${min} ~ ${max}之間的數字`;
+      });
+      btn3.addEventListener("click", function (e) {
+        alert(`投降了吧~答案是${answer}`);
+      });
+    </script>
+  </body>
+</html>
