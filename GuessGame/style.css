@@ -1,0 +1,41 @@
+   * {
+       margin: 0;
+       padding: 0;
+       font-family: "Noto Sans TC", sans-serif;
+   }
+
+   .game {
+       margin: auto;
+       margin-top: 10px;
+       text-align: center;
+       width: 350px;
+       background-color: #87cefa;
+       border: 1px solid #ffffff;
+       box-shadow: 0px 2px 20px #028094;
+       border-radius: 10px;
+       padding-bottom: 15px;
+   }
+
+   h1 {
+       font-size: 36px;
+       margin-top: 15px;
+       margin-bottom: 15px;
+       letter-spacing: 5px;
+   }
+
+   #num-input {
+       margin-bottom: 15px;
+       font-size: 18px;
+   }
+
+   .message {
+       margin-bottom: 15px;
+       font-size: 18px;
+   }
+
+   .btn-group {}
+
+   .btn {
+       font-size: 18px;
+       width: 90px;
+   }
