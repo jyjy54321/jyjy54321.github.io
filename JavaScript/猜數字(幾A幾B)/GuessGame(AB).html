@@ -76,6 +76,7 @@
         btn_guess = document.querySelector(".input-group button");
         input_number = document.querySelector(".input-group input");
         gameRecordsWrap = document.querySelector(".list-group ");
+        keyInput = document.getElementById;
 
         btn_restart.disabled = true;
         btn_check.disabled = true;
@@ -86,7 +87,7 @@
         btn_check.addEventListener("click", CheckAnswer);
         btn_guess.addEventListener("click", GuessNumber);
         btn_restart.addEventListener("click", GiveUpAgain);
-        input_number.addEventListener("keypress", GuessNumber);
+        input_number.addEventListener("change", GuessNumber);
       };
 
       function GameStart() {
