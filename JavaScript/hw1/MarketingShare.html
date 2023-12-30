@@ -42,8 +42,8 @@
       let table, thead, tbody;
 
       window.onload = function () {
-        container = document.getElementById("container");
-        table = document.createElement("table");
+        container = document.getElementById("container"); //選取div
+        table = document.createElement("table"); //新增一個table元素
         table.setAttribute(
           "class",
           "table table-bordered table-striped table-dark"
@@ -53,7 +53,7 @@
 
         CreateThead(marketingSHare.titles);
 
-        // 轉成二維陣列
+        // 轉成二維陣列 讓原本資料只剩下數值
         marketingSHare.data.forEach((data) => {
           let values = Object.values(data);
           marketingSHare2dArray.push(values); //將數值塞入陣列
