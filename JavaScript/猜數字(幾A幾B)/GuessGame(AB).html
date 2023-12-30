@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1A2B猜數字遊戲</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container pt-4 d-flex flex-column">
+      <div class="title pb-4 mx-auto">
+        <h1>1A2B猜數字遊戲</h1>
+      </div>
+
+      <div
+        class="btn-group w-50 pb-4 mx-auto"
+        role="group"
+        aria-label="Basic outlined example"
+      >
+        <button type="button" class="btn btn-outline-secondary">開始</button>
+        <button type="button" class="btn btn btn-outline-secondary">
+          放棄重來
+        </button>
+        <button type="button" class="btn btn btn-outline-secondary">
+          看答案
+        </button>
+      </div>
+      <ul class="list-group w-50 pb-4 mx-auto"></ul>
+      <div class="input-group flex-nowrap w-50 pb-4 mx-auto">
+        <span class="input-group-text" id="addon-wrapping">猜答案</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="輸入4個不重複的數字(0~9)"
+          aria-label="猜數字"
+          aria-describedby="addon-wrapping"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          猜!
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      //宣告變數
+      let answerArray;
+      let answer;
+      let guessNumArray;
+      let btn_start;
+      let btn_restart;
+      let btn_check;
+      let btn_guess;
+      let input_number;
+      let gameRecordsWrap;
+
+      window.onload = function () {
+        answerArray = [];
+        guessNumArray = [];
+        btn_start = document.querySelector(".btn-group :nth-child(1)");
+        btn_restart = document.querySelector(".btn-group :nth-child(2)");
+        btn_check = document.querySelector(".btn-group :nth-child(3)");
+        btn_guess = document.querySelector(".input-group button");
+        input_number = document.querySelector(".input-group input");
+        gameRecordsWrap = document.querySelector(".list-group ");
+
+        btn_restart.disabled = true;
+        btn_check.disabled = true;
+        btn_guess.disabled = true;
+        input_number.disabled = true;
+
+        btn_start.addEventListener("click", GameStart);
+        btn_check.addEventListener("click", CheckAnswer);
+        btn_guess.addEventListener("click", GuessNumber);
+        btn_restart.addEventListener("click", GiveUpAgain);
+        input_number.addEventListener("keypress", GuessNumber);
+      };
+
+      function GameStart() {
+        ClearGameRecords();
+
+        answerArray = [];
+        while (answerArray.length < 4) {
+          //產生0~9的亂數
+          let num = Math.floor(Math.random() * 10);
+          //是否包含
+          if (!answerArray.includes(num)) {
+            answerArray.push(num);
+          }
+        }
+        //console.log(answerArray); //測試
+        //將陣列的數字組合起來 並放入answer字串中
+        answer = answerArray.join("");
+        btn_start.disabled = true;
+        btn_restart.disabled = false;
+        btn_check.disabled = false;
+        btn_guess.disabled = false;
+        input_number.disabled = false;
+      }
+
+      function CheckAnswer() {
+        alert(`投降了吧~ 答案是 ${answer}`);
+      }
+
+      function GuessNumber() {
+        guessNum = input_number.value;
+        //將猜的數字放入陣列 並轉成數字型別
+        guessNumArray = Array.from(guessNum).map(Number);
+        while (
+          guessNum.length !== 4 ||
+          /[^\d]/.test(guessNum) || //正則表達式 \d 0~9的數字 / 起始跟結束 ^否定 []集合內 輸入非數字的字串會是true
+          new Set(guessNumArray).size !== answerArray.length // new Set(Array).size 是陣列中不重複的數量
+        ) {
+          alert(`請正確輸入4個不重複的數字!!`);
+          input_number.value = "";
+          return;
+        }
+
+        let a = 0;
+        let b = 0;
+        //兩個陣列最比對
+        for (i = 0; i < 4; i++) {
+          if (guessNumArray[i] == answerArray[i]) {
+            a++;
+          } else if (answerArray.includes(guessNumArray[i])) {
+            b++;
+          }
+        }
+
+        let records = document.createElement("li");
+        let recordsRange = document.createElement("span");
+        records.className = "list-group-item border-secondary";
+        //判斷答案對錯 標籤顏色
+        if (guessNum !== answer) {
+          recordsRange.className = "badge bg-danger me-1";
+          recordsRange.innerText = `${a}A${b}B`;
+          records.append(recordsRange);
+          records.append(guessNum);
+          gameRecordsWrap.append(records);
+        } else {
+          recordsRange.className = "badge bg-success me-1";
+          recordsRange.innerText = `${a}A${b}B`;
+          records.append(recordsRange);
+          records.append(guessNum);
+          gameRecordsWrap.append(records);
+          btn_start.disabled = false;
+          btn_restart.disabled = true;
+          btn_check.disabled = true;
+          btn_guess.disabled = true;
+          input_number.disabled = true;
+          alert(`恭喜成功過關! 答案是${answer} 請按開始前往新回合`);
+        }
+        input_number.value = "";
+      }
+
+      function GiveUpAgain() {
+        alert(`這局答案是: ${answer}  遊戲將重新開始`);
+        GameStart();
+      }
+
+      function ClearGameRecords() {
+        gameRecordsWrap.innerHTML = ""; //清除ul中的所有資料
+      }
+    </script>
+  </body>
+</html>
