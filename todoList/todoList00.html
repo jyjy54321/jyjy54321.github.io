@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container w-75">
+        <header class="my-1 text-center">
+            <h1>ToDoList</h1>
+        </header>
+        <section class="todo-group">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="todo..." aria-label="Recipient's username"
+                    aria-describedby="button-addon2" id="todo_input">
+                <button class="btn btn-outline-primary" type="button" id="button-add">新增</button>
+            </div>
+
+            <template id="todo-template">
+                <div class="input-group mb-1 p-2 border border-light">
+                    <div class="input-group-text">
+                        <input class="checkbox form-check-input mt-0" type="checkbox" value=""
+                            aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="todo_content form-control" aria-label="Text input with checkbox">
+                    <button class="btn-renew btn btn-warning mx-1 rounded" type="button">編輯</button>
+                    <button class="btn-save btn btn-success mx-1 rounded" type="button">保存</button>
+                    <button class="btn-delete btn btn-danger mx-1 rounded " type="button">刪除</button>
+                </div>
+            </template>
+        </section>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const localStorageKey = "my-todo";
+        let todoItemObject = {};
+        const todoInput = document.querySelector('#todo_input');
+        const addBtn = document.querySelector('#button-add');
+        let todo_template;
+        let array = [{ "todo": "吃飯", "Y/N": "N" }]
+
+    </script>
+    <script type="module">
+        import { $g } from '../Modules/helpers.js'
+        todo_template = $g('#todo-template')
+
+        window.onload = () => {
+            initScreen();
+        }
+
+        addBtn.addEventListener("click", () => {
+            //防呆
+            if (todoInput.value.trim() === "" || todoItemObject["N"].indexOf(todoInput.value) !== -1 || todoItemObject["Y"].indexOf(todoInput.value) !== -1) {
+                todoInput.value = "";
+                return
+            }
+            addTodoList(todoInput.value);
+            getTodoItems(todoInput.value);
+            todoInput.value = "";
+        })
+
+        function addTodoList(content) {
+            todoItemObject["N"].push(content);
+            resetStorage();
+
+        }
+
+        function resetStorage() {
+            const jsonStr = JSON.stringify(todoItemObject);
+            localStorage.setItem(localStorageKey, jsonStr);
+        }
+
+        function getTodoItems(todo) {
+            let cloneTodo = todo_template.content.cloneNode(true); //複製一份todo_template
+            cloneTodo.querySelector('.form-control').value = todo;
+            cloneTodo.querySelector('.form-control').disabled = true;
+            let todoContentList = cloneTodo.querySelector(".todo_content") //清單內的事項內容
+            const renewBtn = cloneTodo.querySelector('.btn-renew');
+            const saveBtn = cloneTodo.querySelector('.btn-save');
+            const deleteBtn = cloneTodo.querySelector('.btn-delete');
+            const checkBox = cloneTodo.querySelector('.checkbox');
+            saveBtn.style.display = "none"; //隱藏保存按鈕
+
+            let todoItemContainer; // 獲取父層
+            let todoItemContent; //獲取要動作的內容
+            let todoItemContentIndex; //獲取要動作的內容在物件裡的位置
+
+            //初始勾選狀況 如果在Y裡找到 就打勾
+            if (todoItemObject["Y"].indexOf(todoContentList.value) !== -1) {
+                checkBox.checked = true;
+            }
+            //創造事項同時設定清單內按鈕
+            checkBox.addEventListener("change", () => {
+                todoItemContainer = deleteBtn.parentNode; // 獲取父層
+                todoItemContent = todoItemContainer.querySelector('.todo_content').value//獲取要動作的內容
+
+                //如果打勾 把N的內容新贈到Y 並把原本的刪除
+                if (checkBox.checked) {
+                    todoItemContentIndex = todoItemObject["N"].indexOf(todoItemContent)
+
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["Y"].push(todoItemContent);
+                        todoItemObject["N"].splice(todoItemContentIndex, 1);
+                        resetStorage();
+                    }
+                } else {
+                    todoItemContentIndex = todoItemObject["Y"].indexOf(todoItemContent)
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["N"].push(todoItemContent);
+                        todoItemObject["Y"].splice(todoItemContentIndex, 1);
+                        resetStorage();
+                    }
+                }
+            })
+
+            renewBtn.addEventListener("click", () => {
+                todoContentList.disabled = false
+                saveBtn.style.display = "";
+                renewBtn.style.display = "none"; //隱藏編輯按鈕
+                todoItemContainer = saveBtn.parentNode; // 獲取父層
+                todoItemContent = todoItemContainer.querySelector('.todo_content').value//獲取要動作的內容
+                if (checkBox.checked) {
+                    todoItemContentIndex = todoItemObject["Y"].indexOf(todoItemContent)
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["Y"].splice(todoItemContentIndex, 1)
+                        resetStorage()
+                    }
+
+                } else {
+                    todoItemContentIndex = todoItemObject["N"].indexOf(todoItemContent)
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["N"].splice(todoItemContentIndex, 1)
+                        resetStorage()
+                    }
+                }
+            })
+
+            saveBtn.addEventListener("click", () => {
+                todoContentList.disabled = true;
+                saveBtn.style.display = "none";
+                renewBtn.style.display = "";
+                todoItemContainer = saveBtn.parentNode; // 獲取父層
+                todoItemContent = todoItemContainer.querySelector('.todo_content').value//獲取要動作的內容
+                if (checkBox.checked) {
+                    todoItemObject["Y"].push(todoItemContent)
+                    resetStorage()
+                } else if (!checkBox.checked) {
+                    todoItemObject["N"].push(todoItemContent)
+                    resetStorage();
+                }
+            })
+
+            deleteBtn.addEventListener("click", () => {
+                todoItemContainer = deleteBtn.parentNode; // 獲取父層
+                todoItemContent = todoItemContainer.querySelector('.todo_content').value//獲取要動作的內容
+                todoItemContentIndex = todoItemObject["N"].indexOf(todoItemContent)
+                // debugger
+                //如果有這筆資料才刪除
+                if (checkBox.checked) {
+                    todoItemContentIndex = todoItemObject["Y"].indexOf(todoItemContent)
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["Y"].splice(todoItemContentIndex, 1)
+                        resetStorage()
+                        todoItemContainer.remove();
+                    }
+
+                } else {
+                    todoItemContentIndex = todoItemObject["N"].indexOf(todoItemContent)
+                    if (todoItemContentIndex !== -1) {
+                        todoItemObject["N"].splice(todoItemContentIndex, 1)
+                        resetStorage()
+                        todoItemContainer.remove();
+                    }
+                }
+
+            })
+
+            document.querySelector(".todo-group").append(cloneTodo);
+        }
+
+        //取得本機資料
+        function getTodoFromStorage() {
+            const todoObj = JSON.parse(localStorage.getItem(localStorageKey));//轉換格式 取出來
+            if (todoObj) {
+                todoItemObject = todoObj; //全部的JSON資料 這裡是轉成物件 if(todoObj)如果有的話放進todoItemObj
+            }
+        }
+
+        function initScreen() {
+            //初始畫面
+            todoItemObject["Y"] = [];
+            todoItemObject["N"] = [];
+
+            getTodoFromStorage();
+
+            todoItemObject["N"].forEach((todo) => {
+                getTodoItems(todo);
+            })
+
+            todoItemObject["Y"].forEach((todo) => {
+                getTodoItems(todo);
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>
